@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DDoS Shield | Security Console</title><link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header><div><div class="eyebrow">WEBSITE SECURITY CONSOLE</div><h1>DDoS <span>Shield</span></h1><p>Automatic website availability monitoring</p></div><div class="live"><i></i> MONITOR SERVICE</div></header>
+<main>
+<section class="auth panel"><label for="token">ADMIN ACCESS TOKEN</label><div class="inline"><input id="token" type="password" placeholder="Paste your admin token"><button id="saveToken">Connect</button></div><small>Your token is stored only in this browser session.</small></section>
+<section class="panel"><div class="sectionhead"><div><h2>Add a website</h2><p>Adding a public HTTPS URL starts monitoring immediately.</p></div></div><form id="addForm" class="inline"><input id="url" type="url" placeholder="https://yourwebsite.com" required><button>Add & Monitor</button></form><div id="notice" role="status"></div></section>
+<section class="stats"><article class="panel"><small>WEBSITES</small><strong id="total">—</strong></article><article class="panel"><small>ONLINE</small><strong id="online">—</strong></article><article class="panel"><small>NEEDS ATTENTION</small><strong id="attention">—</strong></article></section>
+<section class="panel"><div class="sectionhead"><div><h2>Monitored websites</h2><p id="interval">Waiting for connection</p></div><button class="secondary" id="refresh">Refresh</button></div><div id="sites" class="empty">Connect with your admin token to load websites.</div></section>
+<section class="panel"><h2>Recent events</h2><div id="events" class="empty">No events loaded.</div></section>
+<footer>Monitoring is not DDoS mitigation. Use a CDN/WAF or hosting provider for upstream attack absorption.</footer>
+</main><script src="/static/app.js"></script>
+</body></html>
